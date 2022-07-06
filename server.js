@@ -51,7 +51,7 @@ io.on('connection', function (socket) {
 
 app.use('/', express.static('public'))
 
-server.listen(1234, function () {
-    console.log('started on http://localhost:1234')
+server.listen(https://thesouravarya.github.io/Web-Chat-App/, function () {
+    console.log('started on https://thesouravarya.github.io/Web-Chat-App/')
 
 })
