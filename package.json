@@ -2,8 +2,14 @@
   "name": "webchat-box",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "serve": "node server.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +17,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "install": "^0.13.0",
+    "nodemon": "^2.0.19",
     "socket.io": "^4.1.2"
   }
 }
