@@ -6,6 +6,8 @@ const app = express()
 
 const socketio = require('socket.io')
 
+const PORT=process.env.PORT || 3000;
+
 const server = http.createServer(app)
 
 const io = socketio(server)
@@ -51,7 +53,7 @@ io.on('connection', function (socket) {
 
 app.use('/', express.static('public'))
 
-server.listen(https://thesouravarya.github.io/Web-Chat-App/, function () {
-    console.log('started on https://thesouravarya.github.io/Web-Chat-App/')
+server.listen(PORT, function () {
+    console.log(` app running on ${PORT}`)
 
 })
